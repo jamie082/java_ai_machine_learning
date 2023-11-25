@@ -18,7 +18,7 @@ class loop{
                 Scanner myObj = new Scanner(System.in);
                 System.out.println("Should there be lower taxes for democrats?"); // write to data file
                 String input_1 = myObj.nextLine(); // get input
-                output_1.write(String_3 + "|" + input_1); // concentate string and output it to data_1 file
+                output_1.write(String_3 + "|" + input_1 + "\n"); // concentate string and output it to data_1 file
                 output_1.close();
             }
 

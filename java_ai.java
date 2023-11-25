@@ -8,16 +8,16 @@ class loop{
         int i = 0;
         do {
             Scanner myObj = new Scanner(System.in);
-            System.out.println("Should there be lower taxes for democrats?");
+            System.out.println("Should there be lower taxes for democrats?"); // write to data file
             String input_1 = myObj.nextLine();
 
-            System.out.println("Should there be higher taxes for republcians who make over $450,000 yearly?");
+            System.out.println("Should there be higher taxes for republcians who make over $450,000 yearly?"); // write to data file
             String input_2 = myObj.nextLine();
 
-            System.out.println("Do you think there should be free health insurance for US Citizens?");
+            System.out.println("Do you think there should be free health insurance for US Citizens?"); // write to data file
             String input_3 = myObj.nextLine();
         
-            System.out.println("Which political party are you affiliated with?");
+            System.out.println("Which political party are you affiliated with?"); // write to data file
             String input_4 = myObj.nextLine();
             i++;
         } while (i < 1);

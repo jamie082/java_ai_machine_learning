@@ -6,15 +6,24 @@ import java.io.FileWriter;
 class loop{
     public static void main(String[] args) {
         int i = 0;
-        String = "Should there be lower taxes for Democrats";
-        String = "Should there be higher taxes for Republicans who make over $450,000 yearly?";
-        String = "Do you think there should be free health insurance for American Citizens every month?";
-        String = "Which political party are you affilitated with?";
-        
+        String String_1 = "Should there be lower taxes for Democrats";
+        String String_2 = "Should there be higher taxes for Republicans who make over $450,000 yearly?";
+        String String_3 = "Do you think there should be free health insurance for American Citizens every month?";
+        String String_4 = "Which political party are you affilitated with?";
+
         do {
-            Scanner myObj = new Scanner(System.in);
-            System.out.println("Should there be lower taxes for democrats?"); // write to data file
-            String input_1 = myObj.nextLine();
+            try {
+                FileWriter output_1 = new FileWriter("data_1.txt", true);
+                Scanner myObj = new Scanner(System.in);
+                System.out.println("Should there be lower taxes for democrats?"); // write to data file
+                String input_1 = myObj.nextLine();
+                output_1.write(String_1 + input_1); // concentate string and output it to data_1 file
+                output_1.close();
+            }
+
+            catch (Exception e) {
+                e.getStackTrace();
+            }
 
             System.out.println("Should there be higher taxes for republcians who make over $450,000 yearly?"); // write to data file
             String input_2 = myObj.nextLine();

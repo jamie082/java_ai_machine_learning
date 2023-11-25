@@ -10,7 +10,13 @@ class loop{
         String String_2 = "Should there be higher taxes for Republicans who make over $450,000 yearly?";
         String String_3 = "Do you think there should be free health insurance for American Citizens every month?";
         String String_4 = "Which political party are you affilitated with?";
-        Scanner myObj = new Scanner(System.in);
+                        
+        int left_wing = 001;
+        int right_wing = 002;
+        int republican = 003;
+                
+        Scanner myObj = new Scanner(System.in);          
+
         do {
             try {
                 // Creates a FileWriter
@@ -27,7 +33,8 @@ class loop{
             }
 
             try {
-                System.out.println("Should there be higher taxes for republcians who make over $450,000 yearly?"); // write to data file
+                FileWriter output_2 = new FileWriter("data_2.txt");
+                System.out.println("Should there be higher taxes for republicans who make over $450,000 yearly?"); // write to data file
                 String input_2 = myObj.nextLine();
                 output_2.write(String_2 + "|" + input_2 + "\n");
                 output_2.close();
@@ -37,9 +44,26 @@ class loop{
                 e.getStackTrace();
             }
     
-        
-            System.out.println("Which political party are you affiliated with?"); // write to data file
-            String input_4 = myObj.nextLine();
+            try {
+                FileWriter output_3 = new FileWriter("data_3.txt");
+                System.out.println("Do you think the government should make it easier to apply for assistance?");
+                String input_3 = myObj.nextLine();
+                output_3.write(String_3 + "|" + input_3 + "\n");
+                output_3.close();
+            }
+            
+            catch(Exception e) {
+                e.getStackTrace();
+            }
+
+            try {
+                System.out.println("What do you affiliate with? Democrat, Left-Wing, Right-Wing, or Republican?: ");
+                String input_final = myObj.nextLine();
+            }
+
+            catch(Exception e) {
+                e.getStackTrace();
+            }
             i++;
         
         } while (i < 1);

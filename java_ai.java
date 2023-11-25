@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.FileWriter;
 
 class loop{
-    public void machine_learning_method() {
+    public void machine_learning_method() { // machine learning method to guess what party you belong to
         System.out.println("Method without paremeter");  // input_1, input_2, input_3  and 001, 002, 003
     }
     public static void main(String[] args) {
@@ -18,7 +18,9 @@ class loop{
         int right_wing = 002;
         int republican = 003;
                 
-        Scanner myObj = new Scanner(System.in);          
+        Scanner myObj = new Scanner(System.in);  
+        
+        System.out.println("Machine Learning Artificial Intelligence program written by Jamie morrissey\nFor WGU December 2023");
 
         do {
             try {

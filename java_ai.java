@@ -5,7 +5,7 @@ import java.io.FileWriter;
 
 class loop{
     public void machine_learning_method() {
-        System.out.println("Method without paremeter");
+        System.out.println("Method without paremeter");  // input_1, input_2, input_3  and 001, 002, 003
     }
     public static void main(String[] args) {
         int i = 0;
@@ -25,7 +25,7 @@ class loop{
                 // Creates a FileWriter
                 FileWriter output_1 = new FileWriter("data_1.txt", true);
                 System.out.println("Should there be lower taxes for democrats?"); // write to data file
-                String input_1 = myObj.nextLine(); // get input
+                String input_1 = myObj.nextLine(); // get input (input_1)
                 output_1.write(String_3 + "|" + input_1 + "\n"); // concentate string and output it to data_1 file
                 output_1.close();
             }
@@ -37,7 +37,7 @@ class loop{
             try {
                 FileWriter output_2 = new FileWriter("data_2.txt",true);
                 System.out.println("Should there be higher taxes for republicans who make over $450,000 yearly?"); // write to data file
-                String input_2 = myObj.nextLine();
+                String input_2 = myObj.nextLine(); // get input (input_2)
                 output_2.write(String_2 + "|" + input_2 + "\n");
                 output_2.close();
             }
@@ -49,7 +49,7 @@ class loop{
             try {
                 FileWriter output_3 = new FileWriter("data_3.txt",true);
                 System.out.println("Do you think the government should make it easier to apply for assistance?");
-                String input_3 = myObj.nextLine();
+                String input_3 = myObj.nextLine(); // get input (input_3)
                 output_3.write(String_3 + "|" + input_3 + "\n");
                 output_3.close();
             }

@@ -6,6 +6,7 @@ import java.io.FileWriter;
 class loop{
     public void machine_learning_method() { // machine learning method to guess what party you belong to
         System.out.println("Method without paremeter");  // input_1, input_2, input_3  and 001, 002, 003
+
     }
     public static void main(String[] args) {
         int i = 0;
@@ -17,6 +18,7 @@ class loop{
         int left_wing = 001;
         int right_wing = 002;
         int republican = 003;
+        int democrat = 004;
                 
         Scanner myObj = new Scanner(System.in);  
         
@@ -68,7 +70,6 @@ class loop{
             catch(Exception e) {
                 e.getStackTrace();
             }
-
         
             i++;
         } while (i < 1);

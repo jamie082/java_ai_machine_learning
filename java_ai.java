@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.io.FileWriter;
 
 class loop{
+    public void machine_learning_method() {
+        System.out.println("Method without paremeter");
+    }
     public static void main(String[] args) {
         int i = 0;
         String String_1 = "Should there be lower taxes for Democrats";
@@ -21,7 +24,6 @@ class loop{
             try {
                 // Creates a FileWriter
                 FileWriter output_1 = new FileWriter("data_1.txt", true);
-
                 System.out.println("Should there be lower taxes for democrats?"); // write to data file
                 String input_1 = myObj.nextLine(); // get input
                 output_1.write(String_3 + "|" + input_1 + "\n"); // concentate string and output it to data_1 file
@@ -33,7 +35,7 @@ class loop{
             }
 
             try {
-                FileWriter output_2 = new FileWriter("data_2.txt");
+                FileWriter output_2 = new FileWriter("data_2.txt",true);
                 System.out.println("Should there be higher taxes for republicans who make over $450,000 yearly?"); // write to data file
                 String input_2 = myObj.nextLine();
                 output_2.write(String_2 + "|" + input_2 + "\n");
@@ -45,7 +47,7 @@ class loop{
             }
     
             try {
-                FileWriter output_3 = new FileWriter("data_3.txt");
+                FileWriter output_3 = new FileWriter("data_3.txt",true);
                 System.out.println("Do you think the government should make it easier to apply for assistance?");
                 String input_3 = myObj.nextLine();
                 output_3.write(String_3 + "|" + input_3 + "\n");
@@ -57,15 +59,16 @@ class loop{
             }
 
             try {
-                System.out.println("What do you affiliate with? Democrat, Left-Wing, Right-Wing, or Republican?: ");
+                System.out.println("What do you affiliate with? Democrat, Left-Wing, Right-Wing, or Republican?:");
                 String input_final = myObj.nextLine();
             }
 
             catch(Exception e) {
                 e.getStackTrace();
             }
-            i++;
+
         
+            i++;
         } while (i < 1);
         // load data file at the end
     }

@@ -8,6 +8,7 @@ class loop{
         System.out.println("Method without paremeter");  // input_1, input_2, input_3  and 001, 002, 003
 
     }
+
     public static void main(String[] args) {
         int i = 0;
         String String_1 = "Should there be lower taxes for Democrats";
@@ -32,6 +33,22 @@ class loop{
                 String input_1 = myObj.nextLine(); // get input (input_1)
                 output_1.write(String_3 + "|" + input_1 + "\n"); // concentate string and output it to data_1 file
                 output_1.close();
+                if(input_1 = "Republican")
+                {
+                    ++republican;
+                }
+                else if (input_1 = "Right-Wing")
+                {
+                    ++right_wing;
+                }
+                else if(input_1 = "Left-Wing")
+                {
+                    ++left_wing;
+                }
+                else if(input_1 = "Democrat")
+                {
+                    ++democrat;
+                }
             }
 
             catch (Exception e) {

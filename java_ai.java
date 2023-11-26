@@ -5,7 +5,7 @@ import java.io.FileWriter;
 
 class loop{
     public void machine_learning_method() { // machine learning method to guess what party you belong to
-        System.out.println("Method without paremeter");  // input_1, input_2, input_3  and 001, 002, 003
+        System.out.println("Method without paremeter");  // input_1, input_2, input_3  and 001, 002, 003 
 
     }
 
@@ -16,10 +16,10 @@ class loop{
         String String_3 = "Do you think there should be free health insurance for American Citizens every month?";
         String String_4 = "Which political party are you affilitated with?";
                         
-        int left_wing = 001;
-        int right_wing = 002;
-        int republican = 003;
-        int democrat = 004;
+        int left_wing = 0;
+        int right_wing = 0;
+        int republican = 0;
+        int democrat = 0;
                 
         Scanner myObj = new Scanner(System.in);  
         
@@ -33,21 +33,21 @@ class loop{
                 String input_1 = myObj.nextLine(); // get input (input_1)
                 output_1.write(String_3 + "|" + input_1 + "\n"); // concentate string and output it to data_1 file
                 output_1.close();
-                if(input_1 = "Republican")
+                if (input_1 == "Left-Wing")
                 {
-                    ++republican;
+                    left_wing++;
                 }
-                else if (input_1 = "Right-Wing")
+                else if (input_1 == "Right-Wing")
                 {
-                    ++right_wing;
+                    right_wing++;
                 }
-                else if(input_1 = "Left-Wing")
+                else if (input_1 == "Democrat")
                 {
-                    ++left_wing;
+                    democrat++;
                 }
-                else if(input_1 = "Democrat")
+                else if (input_1 == "Republican")
                 {
-                    ++democrat;
+                    republican++;
                 }
             }
 

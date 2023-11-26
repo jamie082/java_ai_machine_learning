@@ -6,7 +6,6 @@ import java.io.FileWriter;
 class loop{
     public void machine_learning_method() { // machine learning method to guess what party you belong to
         System.out.println("Method without paremeter");  // input_1, input_2, input_3  and 001, 002, 003 
-
     }
 
     public static void main(String[] args) {
@@ -49,6 +48,7 @@ class loop{
                 {
                     republican++;
                 }
+                // add variable +1 if input_1 was selected to specific var
             }
 
             catch (Exception e) {
@@ -61,6 +61,22 @@ class loop{
                 String input_2 = myObj.nextLine(); // get input (input_2)
                 output_2.write(String_2 + "|" + input_2 + "\n");
                 output_2.close();
+                if (input_2 == "Left-Wing")
+                {
+                    left_wing++;
+                }
+                else if (input_2 == "Right-Wing")
+                {
+                    right_wing++;
+                }
+                else if (input_2 == "Democrat")
+                {
+                    democrat++;
+                }
+                else if (input_2 == "Republican")
+                {
+                    republican++;
+                }
             }
 
             catch(Exception e) {
@@ -73,6 +89,22 @@ class loop{
                 String input_3 = myObj.nextLine(); // get input (input_3)
                 output_3.write(String_3 + "|" + input_3 + "\n");
                 output_3.close();
+                if (input_3 == "Left-Wing")
+                {
+                    left_wing++;
+                }
+                else if (input_3 == "Right-Wing")
+                {
+                    right_wing++;
+                }
+                else if (input_3 == "Democrat")
+                {
+                    democrat++;
+                }
+                else if (input_3 == "Republican")
+                {
+                    republican++;
+                }
             }
             
             catch(Exception e) {

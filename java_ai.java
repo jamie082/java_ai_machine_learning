@@ -16,18 +16,14 @@ import java.io.FileWriter;
         String String_3 = "Do you think there should be free health insurance for American Citizens every month?";
         String String_4 = "Which political party are you affilitated with?";
                         
+        int left_wing = 0; // initilize variables to 0
         int right_wing = 0;
         int republican = 0;
         int democrat = 0;
-        int left_wing = 0;
                 
         Scanner myObj = new Scanner(System.in);  
         
         System.out.println("Machine Learning Artificial Intelligence program written by Jamie morrissey\nFor WGU December . Insert Left-Wing, Right-Wing, Democrat, or Republican for choices");
-        String string_1 = "Left-Wing";
-        String string_2 = "Right-Wing";
-        String string_3 = "Democrat";
-        String string_4 = "Republican";
 
         do {
             try {
@@ -37,24 +33,23 @@ import java.io.FileWriter;
                 String input_1 = myObj.nextLine(); // get input (input_1)
                 output_1.write(String_3 + "|" + input_1 + "\n"); // concentate string and output it to data_1 file
                 output_1.close();
-
-                if (string_1.equals("Left-Wing"))
+                if (input_1 == "Left-Wing") // ask if Left-Wing
                 {
-                    left_wing = 100;
+                    left_wing++;
                 }
-                else if (string_2.equals("Right-Wing"))
+                else if (input_1 == "Right-Wing") // ask if Right-Wing 
                 {
-                    right_wing = 101;
+                    right_wing++;
                 }
-                else if (string_3.equals("Democrat"))
+                else if (input_1 == "Democrat") // ask if Democrat
                 {
-                    democrat = 102;
+                    democrat++;
                 }
-                else if (string_4.equals("Republican"))
+                else if (input_1 == "Republican") // ask if Republican
                 {
-                    republican = 103;
+                    republican++;
                 }
-                System.out.println(input_1);
+                // add variable +1 if input_1 was selected to specific var
             }
 
             catch (Exception e) {
@@ -69,7 +64,7 @@ import java.io.FileWriter;
                 output_2.close();
                 if (input_2 == "Left-Wing")
                 {
-                   left_wing++;
+                    left_wing++;
                 }
                 else if (input_2 == "Right-Wing")
                 {
@@ -83,7 +78,6 @@ import java.io.FileWriter;
                 {
                     republican++;
                 }
-                System.out.println(input_2);
             }
 
             catch(Exception e) {
@@ -119,7 +113,7 @@ import java.io.FileWriter;
             }
 
             try {
-                System.out.println("What do you affiliate with? Democrat, Left-Wing, Right-Wing, or Republican?:");
+                System.out.println("What do you affiliate with? Democrat, Left-Wing, Right-Wing, or Republican?:"); // ask final question, about what party they are affiliated with
                 String input_final = myObj.nextLine();
             }
 
@@ -128,6 +122,6 @@ import java.io.FileWriter;
             }
         
             i++;
-        } while (i < 1);
+        } while (i < 1); // initilize while loop
     }
 }

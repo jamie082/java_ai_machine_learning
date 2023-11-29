@@ -20,6 +20,11 @@ import java.io.FileWriter;
         int right_wing = 0;
         int republican = 0;
         int democrat = 0;
+
+        String string_1 = "Left-Wing";
+        String string_2 = "Right-Wing";
+        String string_3 = "Democrat";
+        String string_4 = "Republican";
                 
         Scanner myObj = new Scanner(System.in);  
         
@@ -33,19 +38,19 @@ import java.io.FileWriter;
                 String input_1 = myObj.nextLine(); // get input (input_1)
                 output_1.write(String_3 + "|" + input_1 + "\n"); // concentate string and output it to data_1 file
                 output_1.close();
-                if (input_1 == "Left-Wing") // ask if Left-Wing
+                if (string_1.equals(("Left-Wing"))) // ask if Left-Wing
                 {
                     left_wing++;
                 }
-                else if (input_1 == "Right-Wing") // ask if Right-Wing 
+                else if (string_2.equals(("Right-Wing"))) // ask if Right-Wing 
                 {
                     right_wing++;
                 }
-                else if (input_1 == "Democrat") // ask if Democrat
+                else if (string_3.equals(("Democrat"))) // ask if Democrat
                 {
                     democrat++;
                 }
-                else if (input_1 == "Republican") // ask if Republican
+                else if (string_4.equals(("Republican")))
                 {
                     republican++;
                 }
@@ -62,19 +67,19 @@ import java.io.FileWriter;
                 String input_2 = myObj.nextLine(); // get input (input_2)
                 output_2.write(String_2 + "|" + input_2 + "\n");
                 output_2.close();
-                if (input_2 == "Left-Wing")
+                if (string_1.equals(("Left-Wing"))) // ask if Left-Wing
                 {
                     left_wing++;
                 }
-                else if (input_2 == "Right-Wing")
+                else if (string_2.equals(("Right-Wing"))) // ask if Right-Wing 
                 {
                     right_wing++;
                 }
-                else if (input_2 == "Democrat")
+                else if (string_3.equals(("Democrat"))) // ask if Democrat
                 {
                     democrat++;
                 }
-                else if (input_2 == "Republican")
+                else if (string_4.equals(("Republican")))
                 {
                     republican++;
                 }
@@ -90,19 +95,19 @@ import java.io.FileWriter;
                 String input_3 = myObj.nextLine(); // get input (input_3)
                 output_3.write(String_3 + "|" + input_3 + "\n");
                 output_3.close();
-                if (input_3 == "Left-Wing")
+                        if (string_1.equals(("Left-Wing"))) // ask if Left-Wing
                 {
                     left_wing++;
                 }
-                else if (input_3 == "Right-Wing")
+                else if (string_2.equals(("Right-Wing"))) // ask if Right-Wing 
                 {
                     right_wing++;
                 }
-                else if (input_3 == "Democrat")
+                else if (string_3.equals(("Democrat"))) // ask if Democrat
                 {
                     democrat++;
                 }
-                else if (input_3 == "Republican")
+                else if (string_4.equals(("Republican")))
                 {
                     republican++;
                 }

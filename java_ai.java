@@ -3,9 +3,10 @@ import java.io.File;
 import java.io.IOException;
 import java.io.FileWriter;
 
-class loop{
-    public void machine_learning_method() { // machine learning method to guess what party you belong to
-        System.out.println("Method without paremeter");  // input_1, input_2, input_3  and 001, 002, 003 
+ class loop {
+    void machine_learning_method()
+    { // machine learning method to guess what party you belong to
+        System.out.println("I just got executed!");  // input_1, input_2, input_3  and 001, 002, 003 
     }
 
     public static void main(String[] args) {
@@ -15,14 +16,18 @@ class loop{
         String String_3 = "Do you think there should be free health insurance for American Citizens every month?";
         String String_4 = "Which political party are you affilitated with?";
                         
-        int left_wing = 0;
         int right_wing = 0;
         int republican = 0;
         int democrat = 0;
+        int left_wing = 0;
                 
         Scanner myObj = new Scanner(System.in);  
         
-        System.out.println("Machine Learning Artificial Intelligence program written by Jamie morrissey\nFor WGU December 2023");
+        System.out.println("Machine Learning Artificial Intelligence program written by Jamie morrissey\nFor WGU December . Insert Left-Wing, Right-Wing, Democrat, or Republican for choices");
+        String string_1 = "Left-Wing";
+        String string_2 = "Right-Wing";
+        String string_3 = "Democrat";
+        String string_4 = "Republican";
 
         do {
             try {
@@ -32,23 +37,24 @@ class loop{
                 String input_1 = myObj.nextLine(); // get input (input_1)
                 output_1.write(String_3 + "|" + input_1 + "\n"); // concentate string and output it to data_1 file
                 output_1.close();
-                if (input_1 == "Left-Wing")
+
+                if (string_1.equals("Left-Wing"))
                 {
-                    left_wing++;
+                    left_wing = 100;
                 }
-                else if (input_1 == "Right-Wing")
+                else if (string_2.equals("Right-Wing"))
                 {
-                    right_wing++;
+                    right_wing = 101;
                 }
-                else if (input_1 == "Democrat")
+                else if (string_3.equals("Democrat"))
                 {
-                    democrat++;
+                    democrat = 102;
                 }
-                else if (input_1 == "Republican")
+                else if (string_4.equals("Republican"))
                 {
-                    republican++;
+                    republican = 103;
                 }
-                // add variable +1 if input_1 was selected to specific var
+                System.out.println(input_1);
             }
 
             catch (Exception e) {
@@ -63,7 +69,7 @@ class loop{
                 output_2.close();
                 if (input_2 == "Left-Wing")
                 {
-                    left_wing++;
+                   left_wing++;
                 }
                 else if (input_2 == "Right-Wing")
                 {
@@ -77,6 +83,7 @@ class loop{
                 {
                     republican++;
                 }
+                System.out.println(input_2);
             }
 
             catch(Exception e) {
@@ -122,6 +129,5 @@ class loop{
         
             i++;
         } while (i < 1);
-        // load data file at the end
     }
 }

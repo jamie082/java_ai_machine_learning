@@ -25,7 +25,7 @@ import java.io.FileWriter;
         String string_2 = "Right-Wing";
         String string_3 = "Democrat";
         String string_4 = "Republican";
-                
+           
         Scanner myObj = new Scanner(System.in);  
         
         System.out.println("Machine Learning Artificial Intelligence program written by Jamie morrissey\nFor WGU December . Insert Left-Wing, Right-Wing, Democrat, or Republican for choices");
@@ -35,7 +35,7 @@ import java.io.FileWriter;
                 // Creates a FileWriter
                 FileWriter output_1 = new FileWriter("data_1.txt", true);
                 System.out.println("Should there be lower taxes for democrats?"); // write to data file
-                String input_1 = myObj.nextLine(); // get input (input_1)
+                String input_1 = myObj.nextLine(); // get input from console 
                 output_1.write(String_3 + "|" + input_1 + "\n"); // concentate string and output it to data_1 file
                 output_1.close();
                 if (string_1.equals(("Left-Wing"))) // ask if Left-Wing
@@ -95,7 +95,7 @@ import java.io.FileWriter;
                 String input_3 = myObj.nextLine(); // get input (input_3)
                 output_3.write(String_3 + "|" + input_3 + "\n");
                 output_3.close();
-                        if (string_1.equals(("Left-Wing"))) // ask if Left-Wing
+                if (string_1.equals(("Left-Wing"))) // ask if Left-Wing
                 {
                     left_wing++;
                 }
